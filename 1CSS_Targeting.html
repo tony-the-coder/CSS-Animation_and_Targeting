@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Targeted Selectors</title>
     <style>
-        /* Direct Child */
+        /* These items may not be as common as some other CSS things out there, but it is still really helpful to know how they work. I created this as a reminder and a place I can just go back to if I have any questions of if I want to be sure I am doing something correctly.  */
+
+        /* ======================== */
+
+        /* To target a Direct Child of an item in HTML, I would use the > symbol. Any of the target items would be affected by the CSS that follows.*/
         div>p {
             background: #ddd;
         }
+
+        /* If for some reason I decide to target an HTML item that directly follows a specific HTML item I would use the '+' which would allow the item that is not a child but follows directly after to be modifed by the CSS.' */
 
         /*  Directly after */
         div+p {
@@ -17,7 +23,9 @@
             color: #fff;
         }
 
-        /* By Attribute */
+        /* This might be more common, but this is how an item with a specific attribute is selected.  */
+
+        /* Specific attrinute values */
         a[target] {
             background: #fa2626;
             color: #fff;
@@ -28,8 +36,6 @@
             width: 100%;
             margin-bottom: 5px;
         }
-
-        /* Specific attrivute values */
     </style>
 </head>
 
