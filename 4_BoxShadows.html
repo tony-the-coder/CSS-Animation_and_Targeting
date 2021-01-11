@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadwing</title>
+    <style>
+        .container {
+            display: flex;
+
+        }
+
+        .box {
+            padding: 1rem;
+            margin: 1rem;
+            background: salmon;
+            color: white;
+            /* Here are some shadows. It must be done using the order. offset-x | offset-y | color*/
+            box-shadow: 10px 10px #123432;
+
+            /* Here are some shadows with a blur-radius. It must be done using the order. offset-x | offset-y |  blur-radius | color */
+            box-shadow: 10px 10px 15px #123432;
+
+            /* If we want the shadow to go to the left or up use negative numbers */
+
+            box-shadow: 10px -10px 15px #123432;
+            /* Here are some shadows with a sprad radius. It must be done using the order. offset-x | offset-y |  blur-radius | spread-radius | color. I am not sure why someone would want this, but it does look kind of neat because the items looks like it is floating. It would be cool to have two shadows for all of those Doctor Who fans. Still, this kind of looks older websites*/
+
+            box-shadow: 13px 12px 12px 1px rgba(0, 0, 0, 0.9);
+
+            /* Here are some shadows with a sprad radius. It must be done using the order. offset-x | offset-y |  blur-radius | spread-radius | color. 
+            */
+            /* This is an inset which means it does not go out */
+            box-shadow: inset -3px -3px #321;
+
+            /* The Vastanarada way */
+            box-shadow: 9px 12px #000000, -9px -12px #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>Heading</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolorem repellendus nostrum non
+                corporis labore?
+            </p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolorem repellendus nostrum non
+                corporis labore?
+            </p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolorem repellendus nostrum non
+                corporis labore?
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

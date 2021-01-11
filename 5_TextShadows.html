@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Shadows</title>
+    <style>
+        /* This is some really old looking styling. Unsure when I would use it at all. This is just to have a place to look it al in case I forget.  */
+        h1 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 5rem;
+        }
+
+        h1.one {
+            /*Values for text shadows:   h-shadow | v-shadow | color*/
+            text-shadow: 0.2rem 0.2rem steelblue;
+        }
+
+        h1.two {
+            /*Values for text shadows with a blue:   h-shadow | v-shadow | blur |color*/
+            text-shadow: 0.5rem 0.3rem 0.7rem #06f0d8;
+        }
+
+        h1.three {
+            /* White Text */
+            color: #fff;
+            text-shadow: 0.2rem 0.2rem 1rem steelblue;
+        }
+
+        h1.four {
+            /* With some negative values for the shadow to go up and left */
+            text-shadow: -0.5rem -0.3rem 0.7rem #06f0d8;
+        }
+    </style>
+</head>
+<h1 class="one">Hello, Sweetie</h1>
+<h1 class="two">Hello, Sweetie</h1>
+<h1 class="three">Hello, Sweetie</h1>
+<h1 class="four">Hello, Sweetie</h1>
+
+<body>
+
+</body>
+
+</html>

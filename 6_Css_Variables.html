@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /* Here is where we should define the variables. We can name the variable in the place we are using the variable. That is pointless, it is best to create the scope outside of where you are using it. This does make things so much easier.  */
+
+        :root {
+            --max-width: 1100px;
+            --primary-color: #7e065a;
+            --light-color: #f3f3f3;
+            --secondary-color: steelblue;
+            --box-1-width: 1;
+            --box-2-width: 2;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            font-family: fantasy;
+            line-height: 1.5;
+            background: var(--light-color)
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            border-bottom: 5px var(--secondary-color) solid;
+        }
+
+        .container {
+            display: flex;
+            margin: auto;
+            max-width: var(--max-width)
+        }
+
+        .box {
+            background-color: var(--primary-color);
+            border-bottom: 5px var(--secondary-color) solid;
+            color: #fff;
+            padding: 1rem;
+            margin: 1rem;
+
+        }
+
+        .box h3 {
+            letter-spacing: .3rem;
+        }
+
+        .box-1 {
+            flex: var(--box-1-width)
+        }
+
+        .box-2 {
+            flex: var(--box-2-width)
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Some CSS Variables</h1>
+    </header>
+    <div class="container">
+        <div class="box box-1">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut, totam odit iure corrupti rem!</p>
+        </div>
+        <div class="box box-2">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut, totam odit iure corrupti rem!</p>
+        </div>
+    </div>
+</body>
+
+</html>

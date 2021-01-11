@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: #444;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            /* background: url('https://source.unsplash.com/1600x900/?night-sky,') no-repeat center center/cover; */
+            /* opacity: 0.4; */
+        }
+
+        /* This is a way to reduce just the opacity of an image so that any text is easier to read. It basically mutes the image some and helps the words pop. It is important to remember the z-index or this is just a waste of time. */
+        header:before {
+            content: '';
+            background: url('https://source.unsplash.com/1600x900/?night-sky,') no-repeat center center/cover;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+
+
+        header h1 {
+            font-size: 3rem;
+            margin: 3rem;
+        }
+
+        /* This adds some content before an HTML item.  */
+        .is-required:after {
+            content: '*';
+            color: red;
+            padding-left: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>
+            Hello World
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquid quasi nobis animi, voluptatum repellat.
+        </p>
+    </header>
+    <section>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque debitis, quo nam dicta, quaerat illo
+            molestias harum odio corporis, adipisci odit in porro sunt consequuntur. Alias id delectus architecto magni,
+            excepturi iste.</p>
+    </section>
+    <label class="is-required" for="name">Name</label>
+    <input type="text">
+</body>
+
+</html>
