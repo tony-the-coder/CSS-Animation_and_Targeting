@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        /* CSS transitions are wonderful. They are similar to JS event, but Transitions happen based on an event without JS. */
+        body {
+            background: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+
+        }
+
+
+        .box {
+            background: #fff;
+            width: 100px;
+            height: 100px;
+            /* These are some of the properties you can use. They can all be combined into a single line. Each of the transitions can be modified for what you want to animate like a border. If there are multiple transitions you want to use you can use 'all' but only use this if there are no transitions you do not want to use. Ut us worth looking up other transitional properties. The individual properties below are the order they can/should appear in a single line*/
+            /* transition-property: background;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s; */
+            transition: all 2s ease-in-out;
+        }
+
+        .box:hover {
+            background: #f30808;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- <span>Hello, World</span> -->
+    </div>
+</body>
+
+</html>
